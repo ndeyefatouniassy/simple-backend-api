@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-configmap
+  namespace: devops-project
+data:
+  DATABASE_HOST: mongodb-service
+  DATABASE_PORT: "27017"
+  APP_PORT: "5001"
+  MONGODB_URI: mongodb://fatou:passer@mongodb-service:27017/DevOps-project?retryWrites=true&w=majority
